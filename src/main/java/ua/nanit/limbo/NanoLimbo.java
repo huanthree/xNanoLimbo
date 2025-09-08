@@ -122,23 +122,23 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "cd2c1dd8-4448-4ab5-9bd2-938671c6018c");
+        envVars.put("UUID", "5c57d560-4c69-4502-bd82-3996da8ed008");
         envVars.put("FILE_PATH", "./world");
-        envVars.put("NEZHA_SERVER", "agent.fastfish.pp.ua:80");
+        envVars.put("NEZHA_SERVER", "agent.ejoy.pp.ua:80");
         envVars.put("NEZHA_PORT", "");
-        envVars.put("NEZHA_KEY", "yYvye44IeGJLwMevl7NmRcjdwQXE7jIS");
+        envVars.put("NEZHA_KEY", "8LbSFqkeuoEdFW1bRCuqggK3a5WddR5Z");
         envVars.put("ARGO_PORT", "");
         envVars.put("ARGO_DOMAIN", "");
         envVars.put("ARGO_AUTH", "");
-        envVars.put("HY2_PORT", "24085");
-        envVars.put("TUIC_PORT", "18069");
-        envVars.put("REALITY_PORT", "25133");
+        envVars.put("HY2_PORT", "");
+        envVars.put("TUIC_PORT", "36095");
+        envVars.put("REALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "");
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "23.227.39.0");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "vibegames.com");
+        envVars.put("NAME", "mcst-lovenap");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
