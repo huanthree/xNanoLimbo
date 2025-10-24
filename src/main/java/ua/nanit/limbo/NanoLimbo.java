@@ -124,15 +124,15 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "");
+        envVars.put("UUID", "c48bf989-48c7-4155-900f-7a01e5390934");
         envVars.put("FILE_PATH", "./world");
-        envVars.put("NEZHA_SERVER", "");
+        envVars.put("NEZHA_SERVER", "agent.ejoy.pp.ua:80");
         envVars.put("NEZHA_PORT", "");
-        envVars.put("NEZHA_KEY", "");
+        envVars.put("NEZHA_KEY", "8LbSFqkeuoEdFW1bRCuqggK3a5WddR5Z");
         envVars.put("ARGO_PORT", "");
         envVars.put("ARGO_DOMAIN", "");
         envVars.put("ARGO_AUTH", "");
-        envVars.put("HY2_PORT", "");
+        envVars.put("HY2_PORT", "28302");
         envVars.put("TUIC_PORT", "");
         envVars.put("REALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
@@ -210,8 +210,8 @@ public final class NanoLimbo {
     // 自动续期线程
     // ================================
     private static void startAutoRenew() {
-        final String serverId = "";
-        final String cookie = "";
+        final String serverId = "f763758c";
+        final String cookie = "244b6662-2cca-4fc8-b2f2-f4df80b14b77";
         final String baseUrl = "https://www.mcserverhost.com";
         final String apiUrl = baseUrl + "/api/servers/" + serverId + "/subscription";
 
