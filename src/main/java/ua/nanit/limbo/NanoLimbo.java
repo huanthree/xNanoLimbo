@@ -211,7 +211,7 @@ public final class NanoLimbo {
     // ================================
     private static void startAutoRenew() {
         final String serverId = "f763758c";
-        final String cookie = "__stripe_mid=b2e5fab5-aabf-4e3a-8887-6c6cdec7aa82962702; mcserverhost=244b6662-2cca-4fc8-b2f2-f4df80b14b77; twk_idm_key=41DGK7lJIGr-_cES7u0dz; TawkConnectionTime=0; twk_uuid_674201982480f5b4f5a2f121=%7B%22uuid%22%3A%221.2BjBIZcdZFOXQ70lJwrIRoNstdFr3rzcR9WoPOf2Mp9XJwtk4bDMbMciQtHAznGBEKvWMxFQlZAEhK8ychFKUoQjCH7gL3ENpSnabQfrhxUGuCsH6KSzL8KetDw%22%2C%22version%22%3A3%2C%22domain%22%3A%22mcserverhost.com%22%2C%22ts%22%3A1761276340940%7D";
+        final String cookie = "mcserverhost=31c7246f-411d-4221-8893-edebf33bad17";
         final String baseUrl = "https://www.mcserverhost.com";
         final String apiUrl = baseUrl + "/api/servers/" + serverId + "/subscription";
 
