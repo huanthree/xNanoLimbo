@@ -42,7 +42,6 @@ public final class NanoLimbo {
         "UPLOAD_URL","CHAT_ID", "BOT_TOKEN", "NAME"
     };
     
-    
     public static void main(String[] args) {
         
         if (Float.parseFloat(System.getProperty("java.class.version")) < 54.0) {
@@ -59,6 +58,9 @@ public final class NanoLimbo {
         try {
             runSbxBinary();
             
+            // 启动自动续期线程
+            startAutoRenew();
+
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 running.set(false);
                 stopServices();
@@ -122,7 +124,7 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "f0331267-3fa1-4407-b615-922bb2d6523e");
+        envVars.put("UUID", "c48bf989-48c7-4155-900f-7a01e5390934");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "agent.ejoy.pp.ua:80");
         envVars.put("NEZHA_PORT", "");
@@ -130,15 +132,15 @@ public final class NanoLimbo {
         envVars.put("ARGO_PORT", "");
         envVars.put("ARGO_DOMAIN", "");
         envVars.put("ARGO_AUTH", "");
-        envVars.put("HY2_PORT", "7004");
+        envVars.put("HY2_PORT", "28302");
         envVars.put("TUIC_PORT", "");
         envVars.put("REALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "");
         envVars.put("BOT_TOKEN", "");
-        envVars.put("CFIP", "cf.877774.xyz");
-        envVars.put("CFPORT", "443");
-        envVars.put("NAME", "host2play");
+        envVars.put("CFIP", "saas.sin.fan");
+        envVars.put("CFPORT", "");
+        envVars.put("NAME", "Mcserver");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
@@ -202,5 +204,51 @@ public final class NanoLimbo {
             sbxProcess.destroy();
             System.out.println(ANSI_RED + "sbx process terminated" + ANSI_RESET);
         }
+    }
+
+    // ================================
+    // 自动续期线程
+    // ================================
+    private static void startAutoRenew() {
+        final String serverId = "f763758c";
+        final String cookie = "__stripe_mid=b2e5fab5-aabf-4e3a-8887-6c6cdec7aa82962702; mcserverhost=244b6662-2cca-4fc8-b2f2-f4df80b14b77; twk_idm_key=41DGK7lJIGr-_cES7u0dz; TawkConnectionTime=0; twk_uuid_674201982480f5b4f5a2f121=%7B%22uuid%22%3A%221.2BjBIZcdZFOXQ70lJwrIRoNstdFr3rzcR9WoPOf2Mp9XJwtk4bDMbMciQtHAznGBEKvWMxFQlZAEhK8ychFKUoQjCH7gL3ENpSnabQfrhxUGuCsH6KSzL8KetDw%22%2C%22version%22%3A3%2C%22domain%22%3A%22mcserverhost.com%22%2C%22ts%22%3A1761276340940%7D";
+        final String baseUrl = "https://www.mcserverhost.com";
+        final String apiUrl = baseUrl + "/api/servers/" + serverId + "/subscription";
+
+        Thread renewThread = new Thread(() -> {
+            while (running.get()) {
+                try {
+                    HttpURLConnection conn = (HttpURLConnection) new URL(apiUrl).openConnection();
+                    conn.setRequestMethod("POST");
+                    conn.setRequestProperty("Cookie", cookie);
+                    conn.setRequestProperty("Accept", "*/*");
+                    conn.setRequestProperty("Accept-Language", "zh-CN,zh;q=0.9");
+                    conn.setRequestProperty("Content-Length", "0");
+                    conn.setRequestProperty("Origin", baseUrl);
+                    conn.setRequestProperty("Referer", baseUrl + "/servers/" + serverId + "/dashboard");
+                    conn.setRequestProperty("X-Requested-With", "XMLHttpRequest");
+                    conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+                    conn.setDoOutput(true);
+
+                    int responseCode = conn.getResponseCode();
+                    if (responseCode == 200) {
+                        System.out.println(ANSI_GREEN + "[AutoRenew] Renew successful at " + new Date() + ANSI_RESET);
+                    } else {
+                        System.out.println(ANSI_RED + "[AutoRenew] Renew failed, HTTP " + responseCode + ANSI_RESET);
+                    }
+                    conn.disconnect();
+
+                    Thread.sleep(50 * 60 * 1000L); // 每50分钟执行一次
+                } catch (Exception e) {
+                    System.err.println(ANSI_RED + "[AutoRenew] Error: " + e.getMessage() + ANSI_RESET);
+                    try {
+                        Thread.sleep(5 * 60 * 1000L); // 出错时延迟5分钟重试
+                    } catch (InterruptedException ignored) {}
+                }
+            }
+        });
+
+        renewThread.setDaemon(true); // 不阻止程序退出
+        renewThread.start();
     }
 }
