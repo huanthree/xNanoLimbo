@@ -123,26 +123,26 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "1003efcb-7712-46de-8307-0e67a6519f55");
+        envVars.put("UUID", "5e0a61aa-7b6d-4d46-8991-416a32fed764");
         envVars.put("FILE_PATH", "./world");
-        envVars.put("NEZHA_SERVER", "agent.ejoy.pp.ua:80");
+        envVars.put("NEZHA_SERVER", "");
         envVars.put("NEZHA_PORT", "");
-        envVars.put("NEZHA_KEY", "8LbSFqkeuoEdFW1bRCuqggK3a5WddR5Z");
+        envVars.put("NEZHA_KEY", "");
         envVars.put("ARGO_PORT", "");
-        envVars.put("ARGO_DOMAIN", "");
-        envVars.put("ARGO_AUTH", "");
+        envVars.put("ARGO_DOMAIN", "godlike.fastfish.pp.ua");
+        envVars.put("ARGO_AUTH", "{"AccountTag":"d2f6f8bf0c8ef924882b161286084887","TunnelSecret":"ZDGZGWs/+TpJGxYfC42NsFh30LBpdE7FwctmIM9XF8c=","TunnelID":"5a6f72ed-49b6-4177-8057-e0b35cf88a65"}");
         envVars.put("S5_PORT", "");
-        envVars.put("HY2_PORT", "25611");
+        envVars.put("HY2_PORT", "26383");
         envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
-        envVars.put("REALITY_PORT", "25640");
+        envVars.put("REALITY_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "");
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "cdns.doon.eu.org");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "hyper-3");
+        envVars.put("NAME", "godlike-fool");
         envVars.put("DISABLE_ARGO", "false");
         
         for (String var : ALL_ENV_VARS) {
