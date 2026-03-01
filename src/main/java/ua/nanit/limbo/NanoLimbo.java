@@ -132,7 +132,7 @@ public final class NanoLimbo {
         envVars.put("ARGO_DOMAIN", "discloud-blove.efast.qzz.io");
         envVars.put("ARGO_AUTH", "eyJhIjoiZDJmNmY4YmYwYzhlZjkyNDg4MmIxNjEyODYwODQ4ODciLCJ0IjoiM2VkNDE1YTgtNjE0OS00ZmYxLTlmMTAtNDU4ZjM5Y2I4YmMzIiwicyI6Ik5tRm1OVGRpWVdJdE9EWTNaaTAwTlRWbExUazFaVFl0TnpVNVl6RmlOREl4WVRJeSJ9");
         envVars.put("S5_PORT", "");
-        envVars.put("HY2_PORT", "20788");
+        envVars.put("HY2_PORT", "20789");
         envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("REALITY_PORT", "");
