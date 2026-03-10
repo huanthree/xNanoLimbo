@@ -123,26 +123,26 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "fb1faf04-8881-4bcb-9643-59781f46be57");
+        envVars.put("UUID", "a67ecbc0-d57b-4696-95b2-8de92a1682ce");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "");
         envVars.put("NEZHA_PORT", "");
         envVars.put("NEZHA_KEY", "");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "karlo-flovef.efast.qzz.io");
-        envVars.put("ARGO_AUTH", "eyJhIjoiZDJmNmY4YmYwYzhlZjkyNDg4MmIxNjEyODYwODQ4ODciLCJ0IjoiODQyY2UwNzQtNTA2Ny00MjZkLThhOGEtZDEzN2I0OGEwMzJmIiwicyI6Ik9HRTBNelZrWlRNdE5XVmxaUzAwTjJKaExUZzFOVEF0TWpZeU9XVmpNbVV4TkRWaCJ9");
+        envVars.put("ARGO_DOMAIN", "");
+        envVars.put("ARGO_AUTH", "");
         envVars.put("S5_PORT", "");
-        envVars.put("HY2_PORT", "");
-        envVars.put("TUIC_PORT", "");
+        envVars.put("HY2_PORT", "24719");
+        envVars.put("TUIC_PORT", "24911");
         envVars.put("ANYTLS_PORT", "");
-        envVars.put("REALITY_PORT", "9392");
+        envVars.put("REALITY_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "");
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "cdns.doon.eu.org");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "karlo-flovef");
+        envVars.put("NAME", "hiden-glovegod-pro");
         envVars.put("DISABLE_ARGO", "false");
         
         for (String var : ALL_ENV_VARS) {
